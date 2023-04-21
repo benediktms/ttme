@@ -1,9 +1,10 @@
 {
-  "name": "nextjs-t3-wasm",
+  "name": "ttme",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
+    "build:wasm": "wasm-pack build wasm --release --target web",
     "dev": "next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
@@ -17,11 +18,14 @@
     "@trpc/next": "^10.18.0",
     "@trpc/react-query": "^10.18.0",
     "@trpc/server": "^10.18.0",
+    "clsx": "^1.2.1",
     "next": "^13.2.4",
     "next-auth": "^4.21.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "superjson": "1.12.2",
+    "tailwind-merge": "^1.12.0",
+    "wasm": "file:wasm/pkg",
     "zod": "^3.21.4"
   },
   "devDependencies": {
@@ -40,7 +44,8 @@
     "prettier-plugin-tailwindcss": "^0.2.6",
     "prisma": "^4.11.0",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "wasm-pack": "^0.11.0"
   },
   "ct3aMetadata": {
     "initVersion": "7.11.0"
